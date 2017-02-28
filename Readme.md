@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Виталий Житник](https://up.htmlacademy.ru/adaptive/10/user/233919).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Сёмушкин](https://up.htmlacademy.ru/adaptive/10/user/48647).
 
 ---
 
