@@ -1,0 +1,67 @@
+.catalog-nav {
+  font-family: @open-sans-bold;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    .list-reset();
+  }
+
+  &__link {
+    display: block;
+    padding: 1.2em 0 1.2em 30px;
+    font-size: 19px;
+    line-height: 1.26em;
+    color: white;
+    background-color: @accent-color;
+  }
+
+  &__link--dark-green {
+    background-color: darken(@accent-color, 10%);
+  }
+}
+
+@media @tablet-width {
+
+  .catalog-nav {
+    position: relative;
+    margin-top: -108px;
+  }
+
+  .catalog-nav__wrapper {
+    .container();
+  }
+
+  .catalog-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-nav__item {
+    flex-basis: 334px;
+    flex-grow: 1;
+  }
+
+  .catalog-nav__link {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+@media @desktop-width {
+
+  .catalog-nav {
+    margin-bottom: 80px;
+
+    &::after {
+      bottom: -20px;
+      height: 34px;
+      background-image: url(../../../img/zigzag-fill-desktop.png);
+    }
+  }
+}
+
+
