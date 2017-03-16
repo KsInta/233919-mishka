@@ -1,0 +1,112 @@
+.page-content__title-wrapper--background-image {
+  background-color: #fafafa;
+}
+
+.page-content__title-wrapper--background-grey {
+  background-color: #f1f1f1;
+}
+
+.page-content__title {
+  width: 250px;
+  margin: 0 auto;
+  padding-right: 38px;
+  padding-left: 38px;
+  font-size: 27px;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.page-content__title--background-image {
+  height: 210px;
+  padding-top: 90px;
+  color: @title-color;
+  background: #f1f1f1 url("../../../img/hero-mobile.jpg") no-repeat;
+  background-position: center 0;
+}
+
+.page-content__title--background-grey {
+  height: 102px;
+  padding-top: 74px;
+}
+
+
+@media @tablet-width {
+
+  .page-content__title-wrapper {
+    position: relative;
+    margin-top: -59px;
+    border-top: 2px solid #ececec;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      z-index: 1;
+      width: 100%;
+      height: 24px;
+      background-image: url(../../../img/zigzag-fill-tablet.png);
+    }
+  }
+
+  .page-content__title {
+    width: 514px;
+    padding-right: 127px;
+    padding-left: 127px;
+    font-size: 43px;
+    line-height: 1.16em;
+  }
+
+  .page-content__title--background-image {
+    height: 586px;
+    padding-top: 150px;
+    background: #f1f1f1 url("../../../img/hero-tablet.jpg") no-repeat;
+
+    br {
+      display: none;
+    }
+  }
+
+  .page-content__title--background-grey {
+    height: 126px;
+    padding-top: 98px;
+  }
+}
+
+@media @desktop-width {
+
+  .page-content__title {
+    width: 750px;
+    padding-right: 200px;
+    padding-left: 200px;
+    font-size: 53px;
+    line-height: 1.1em;
+  }
+
+  .page-content__title--background-image {
+    background: #f1f1f1 url("../../../img/hero-desktop.jpg") no-repeat;
+  }
+
+  .page-content__title--background-grey {
+    height: 151px;
+    border-top: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

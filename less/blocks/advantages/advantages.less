@@ -1,0 +1,97 @@
+.advantages {
+  position: relative;
+  margin-bottom: 50px;
+
+  &__wrapper {
+    .container();
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 1.2em;
+  }
+
+  &__list {
+    .list-reset();
+    display: flex;
+    flex-direction: column;
+    font-family: @open-sans-bold;
+    font-size: 17px;
+    line-height: 1.18em;
+  }
+
+  &__item {
+    width: 250px;
+    padding-top: 60px;
+  }
+}
+
+@media @tablet-width {
+
+  .advantages::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 17px;
+    background-image: url("../../../img/zigzag-line-tablet.png");
+  }
+
+  .advantages__title {
+    font-size: 43px;
+    line-height: 1.16em;
+  }
+
+  .advantages__list {
+    flex-wrap: wrap;
+    height: 350px;
+    font-size: 20px;
+    line-height: 1.1em;
+  }
+
+  .advantages__item {
+    width: 300px;
+  }
+}
+
+@media @desktop-width {
+
+  .advantages::before {
+    height: 23px;
+    background-image: url("../../../img/zigzag-line-desktop.png");
+  }
+
+  .advantages__title {
+    margin-left: 175px;
+    font-size: 53px;
+    line-height: 1.08em;
+  }
+
+  .advantages__list {
+    margin-left: 175px;
+    align-items: stretch;
+  }
+
+  .advantages__item:nth-child(n+4) {
+    margin-left: -160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
