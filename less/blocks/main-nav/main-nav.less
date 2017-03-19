@@ -3,61 +3,61 @@
   z-index: 5;
   font-family: @open-sans-bold;
   font-size: 17px;
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__toggle {
-    position: absolute;
-    top: -50px;
-    right: 30px;
-    width: 20px;
-    height: 14px;
-  }
-
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    .list-reset();
-  }
-
-  &__item {
-    display: flex;
-    min-height: 78px;
-    line-height: 1.4em;
-    text-align: center;
-    border-bottom: 2px solid #ececec;
-  }
-
-  &__item:nth-child(n+3) {
-    display: none;
-  }
-
-  &__link {
-    display: block;
-    margin: auto;
-    text-align: center;
-    color: @title-color;
-  }
-
-  &__user-list {
-    display: flex;
-    flex-direction: column;
-    .list-reset();
-  }
-
-  &__user-item {
-    display: flex;
-    min-height: 78px;
-    min-height: 78px;
-    line-height: 1.4em;
-    text-align: center;
-    border-bottom: 2px solid #ececec;
-  }
 }
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  width: 20px;
+  height: 14px;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  .list-reset();
+}
+
+.main-nav__item {
+  display: flex;
+  min-height: 78px;
+  line-height: 1.4;
+  text-align: center;
+  border-bottom: 2px solid #ececec;
+}
+
+.main-nav__item:nth-child(n+3) {
+  display: none;
+}
+
+.main-nav__link {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: @title-color;
+}
+
+.main-nav__user-list {
+  display: flex;
+  flex-direction: column;
+  .list-reset();
+}
+
+.main-nav__user-item {
+  display: flex;
+  min-height: 78px;
+  min-height: 78px;
+  line-height: 1.4;
+  text-align: center;
+  border-bottom: 2px solid #ececec;
+}
+
 
 @media @tablet-width {
 
@@ -79,14 +79,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     order: 2;
-    .main-nav__item {
-      width: 175px;
-      min-height: 59px;
-    }
+  }
 
-    .main-nav__link {
-      margin-left: 0;
-    }
+  .main-nav__item {
+    width: 175px;
+    min-height: 59px;
+  }
+
+  .main-nav__link {
+    margin-left: 0;
   }
 
   .main-nav__user-list {
@@ -100,6 +101,7 @@
 
   .main-nav__user-item {
     border: none;
+
     &:last-child {
       padding-left: 83px;
     }
@@ -110,9 +112,7 @@
     height: 78px;
     border-right: 2px solid #ececec;
     border-left: 2px solid #ececec;
-    .hidden {
-      display: none;
-    }
+    font-size: 0;
   }
 }
 
@@ -126,17 +126,3 @@
     display: block;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

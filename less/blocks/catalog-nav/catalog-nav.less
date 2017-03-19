@@ -1,28 +1,29 @@
 .catalog-nav {
   font-family: @open-sans-bold;
+}
 
-  &__wrapper {
-    width: 320px;
-    margin: 0 auto;
-  }
+.catalog-nav__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
 
-  &__list {
+.catalog-nav__list {
     .list-reset();
-  }
+}
 
-  &__link {
-    display: block;
-    padding: 1.2em 0 1.2em 30px;
-    font-size: 19px;
-    line-height: 1.26em;
-    color: white;
-    background-color: @accent-color;
-  }
+.catalog-nav__link {
+  display: block;
+  padding: 1.2em 0 1.2em 30px;
+  font-size: 19px;
+  line-height: 1.26;
+  color: white;
+  background-color: @accent-color;
 
-  &__link--dark-green {
-    background-color: darken(@accent-color, 10%);
+  &--dark-green {
+    background-color: #56c3b2;
   }
 }
+
 
 @media @tablet-width {
 
@@ -47,7 +48,7 @@
 
   .catalog-nav__link {
     font-size: 20px;
-    line-height: 1.5em;
+    line-height: 1.5;
   }
 }
 
@@ -55,13 +56,5 @@
 
   .catalog-nav {
     margin-bottom: 80px;
-
-    &::after {
-      bottom: -20px;
-      height: 34px;
-      background-image: url(../../../img/zigzag-fill-desktop.png);
-    }
   }
 }
-
-
