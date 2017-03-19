@@ -1,112 +1,53 @@
 .form {
 
-  &__title {
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  &__fieldset {
+  &--popup {
+    width: 260px;
+    margin: auto;
+    padding-right: 30px;
+    padding-left: 30px;
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 45px;
   }
 
-  &__radio {
-    display: none;
-  }
-
-  &__checkbox {
-    display: none;
-  }
-
-  &__input {
-    height: 48px;
-    font-family: inherit;
-    font-size: 17px;
-    line-height: 1em;
-    border: none;
-    border-bottom: 2px solid @title-color;
-    outline-color: transparent;
-  }
-
-  &__textarea {
-    padding: 16px;
-    font-family: inherit;
-    font-size: 17px;
-    line-height: 1em;
-    border: 2px solid @title-color;
-    outline-color: transparent;
-  }
-
-  &__label {
-    font-family: @open-sans-bold;
-    font-size: 17px;
-  }
-
-  &__required-fields {
-    font-size: 14px;
-  }
-
-  &__btn {
-    background-color: transparent;
+  &--order {
+    .container();
+    display: flex;
+    flex-direction: column;
   }
 }
 
-/*Форма в модальном окне*/
-
-.form--add-to-cart {
-  width: 260px;
-  margin: auto;
-  padding-right: 30px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 35px;
-  padding-bottom: 45px;
-}
-
-
-.form__fieldset--stretched {
-  justify-content: space-between;
-  align-self: stretch;
+.form__fieldset {
+  border: none;
 }
 
 .form__title {
   width: 150px;
   font-size: 25px;
-  line-height: 1.2em;
-}
-
-.form__item--small {
-  display: flex;
-  width: 78px;
-  height: 48px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 2px solid #ececec;
-}
-
-.form__label--small {
-  margin: auto;
-}
-
-/*Конец*/
-
-/*Форма заказа*/
-
-.form--order {
-  .container();
-  display: flex;
-  flex-direction: column;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .form__descr {
   font-size: 13px;
-  line-height: 1.8em;
+  line-height: 1.8;
 }
 
-.form__fieldset--full-width {
-  flex-direction: column;
+.form__fieldset-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+
+  &--stretched {
+    justify-content: space-between;
+    align-self: stretch;
+  }
+
+  &--full-width {
+    flex-direction: column;
+  }
 }
 
 .form__fieldset-title {
@@ -118,7 +59,6 @@
   text-transform: uppercase;
   color: @accent-color;
 
-
   &::after {
     content: '';
     position: relative;
@@ -129,76 +69,124 @@
   }
 }
 
-.form__list--medium {
-  display: flex;
-  flex-direction: column;
-}
+.form__list {
 
-.form__item--medium {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.form__label--radio,
-.form__label--checkbox {
-  position: relative;
-  padding-left: 64px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -10px;;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border: 2px solid @title-color;
+  &--medium {
+    display: flex;
+    flex-direction: column;
   }
 }
 
+.form__item {
 
-.form__label--radio {
+  &--small {
+    display: flex;
+    width: 78px;
+    height: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid #ececec;
+  }
 
-  &::before {
-    border-radius: 50%;
+  &--medium {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 
-/*Конец*/
+.form__radio {
+  display: none;
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form__input {
+  height: 48px;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1;
+  border: none;
+  border-bottom: 2px solid @title-color;
+  outline-color: transparent;
+}
+
+.form__textarea {
+  padding: 16px;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1;
+  border: 2px solid @title-color;
+  outline-color: transparent;
+}
+
+.form__label {
+  font-family: @open-sans-bold;
+  font-size: 17px;
+
+  &--small {
+    margin: auto;
+  }
+
+  &--radio,
+  &--checkbox {
+    position: relative;
+    padding-left: 64px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      border: 2px solid @title-color;
+    }
+  }
+
+  &--radio {
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.form__required-fields {
+  font-size: 14px;
+}
 
 @media @tablet-width {
 
-  /*Форма в модальном окне*/
+  .form {
 
-  .form--add-to-cart {
-    width: 360px;
-    padding-right: 103px;
-    padding-left: 103px;
-
-    .form__title {
+    &--popup {
       width: 360px;
-      font-size: 30px;
-      line-height: 1.9em;
-    }
-
-    .form__item {
-      width: 108px;
+      padding-right: 103px;
+      padding-left: 103px;
     }
   }
 
-  /*Конец*/
-
-  /*Форма заказа*/
-
-  .form__fieldset--full-width {
-    flex-direction: row;
-    align-items: baseline;
-    margin-bottom: 50px;
+  .form__title {
+    width: 360px;
+    font-size: 30px;
+    line-height: 1.9;
   }
 
-  .form__fieldset--full-width:last-child {
-    justify-content: space-between;
+  .form__fieldset-wrapper {
+
+    &--full-width {
+      flex-direction: row;
+      align-items: baseline;
+      margin-bottom: 50px;
+    }
+
+    &--full-width:last-child {
+      justify-content: space-between;
+    }
   }
 
   .form__fieldset-title {
@@ -209,28 +197,41 @@
     }
   }
 
-  .form__list--medium {
-    align-items: stretch;
-    flex-grow: 1;
-    width: 500px;
+  .form__list {
+
+    &--medium {
+      align-items: stretch;
+      flex-grow: 1;
+      width: 500px;
+    }
+
+    &--column {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
-  .form__list--column {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .form__item {
+
+    &--small {
+      width: 108px;
+    }
+
+    &--medium {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &--column {
+      flex-basis: 250px;
+    }
   }
 
-  .form__item--medium {
-    flex-direction: row;
-    align-items: baseline;
-  }
+  .form__label {
 
-  .form__item--column {
-    flex-basis: 250px;
-  }
-
-  .form__label--medium {
-    margin-right: 20px;
+    &--medium {
+      margin-right: 20px;
+    }
   }
 
   .form__input,
@@ -245,45 +246,11 @@
   .form__btn {
     order: 1;
   }
-
-  /*Конец*/
 }
 
 @media @desktop-width {
 
-   /*Форма заказа*/
-
-  .form__fieldset--full-width {
-    margin-right: 130px;
+  .form__fieldset-wrapper--full-width {
+    margin-right: 100px;
   }
-
-  /*Конец*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

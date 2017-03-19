@@ -1,9 +1,12 @@
-.page-content__title-wrapper--background-image {
-  background-color: #fafafa;
-}
+.page-content__title-wrapper {
 
-.page-content__title-wrapper--background-grey {
-  background-color: #f1f1f1;
+  &--background-image {
+    background-color: #fafafa;
+  }
+
+  &--background-grey {
+    background-color: #f1f1f1;
+  }
 }
 
 .page-content__title {
@@ -12,21 +15,21 @@
   padding-right: 38px;
   padding-left: 38px;
   font-size: 27px;
-  line-height: 1.1em;
+  line-height: 1.1;
   text-align: center;
-}
 
-.page-content__title--background-image {
-  height: 210px;
-  padding-top: 90px;
-  color: @title-color;
-  background: #f1f1f1 url("../../../img/hero-mobile.jpg") no-repeat;
-  background-position: center 0;
-}
+  &--background-image {
+    min-height: 210px;
+    padding-top: 90px;
+    color: @title-color;
+    background: #f1f1f1 url('../less/blocks/page-content/hero-mobile.jpg') no-repeat;
+    background-position: center 0;
+  }
 
-.page-content__title--background-grey {
-  height: 102px;
-  padding-top: 74px;
+  &--background-grey {
+    height: 102px;
+    padding-top: 74px;
+  }
 }
 
 
@@ -44,7 +47,6 @@
       z-index: 1;
       width: 100%;
       height: 24px;
-      background-image: url(../../../img/zigzag-fill-tablet.png);
     }
   }
 
@@ -53,22 +55,22 @@
     padding-right: 127px;
     padding-left: 127px;
     font-size: 43px;
-    line-height: 1.16em;
-  }
+    line-height: 1.16;
 
-  .page-content__title--background-image {
-    height: 586px;
-    padding-top: 150px;
-    background: #f1f1f1 url("../../../img/hero-tablet.jpg") no-repeat;
+    &--background-image {
+      min-height: 586px;
+      padding-top: 150px;
+      background: #f1f1f1 url('../less/blocks/page-content/hero-tablet.jpg') no-repeat;
 
-    br {
-      display: none;
+      br {
+        display: none;
+      }
     }
-  }
 
-  .page-content__title--background-grey {
-    height: 126px;
-    padding-top: 98px;
+    &--background-grey {
+      height: 126px;
+      padding-top: 98px;
+    }
   }
 }
 
@@ -79,34 +81,20 @@
     padding-right: 200px;
     padding-left: 200px;
     font-size: 53px;
-    line-height: 1.1em;
-  }
+    line-height: 1.1;
 
-  .page-content__title--background-image {
-    background: #f1f1f1 url("../../../img/hero-desktop.jpg") no-repeat;
-  }
+    &::after {
+      width: 34px;
+    }
 
-  .page-content__title--background-grey {
-    height: 151px;
-    border-top: 100px;
+
+    &--background-image {
+      background: #f1f1f1 url('../less/blocks/page-content/hero-desktop.jpg') no-repeat;
+    }
+
+    &--background-grey {
+      height: 151px;
+      border-top: 100px;
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
