@@ -1,5 +1,5 @@
 .recalls {
-  margin-bottom: 50px;
+  margin-bottom: 88px;
 }
 
 .recalls__wrapper {
@@ -9,16 +9,18 @@
 }
 
 .recalls__title {
-  margin-bottom: 0;
+  margin-bottom: -5px;
 }
 
 .recalls__item {
   width: 100%;
+  margin-bottom: 50px;
   margin-left: 0;
 }
 
 .recalls__text {
   width: 100%;
+  margin-bottom: 31px;
   margin-left: 0;
   line-height: 2;
 }
@@ -34,26 +36,34 @@
   line-height: 1.76;
 }
 
+.slider__controls {
+  margin-bottom: 50px;
+}
+
 
 @media @tablet-width {
 
   .recalls {
-    margin-bottom: 120px;
+    margin-bottom: 150px;
   }
 
   .recalls__wrapper {
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
+  }
 
-    .btn {
-      order: 2;
-      margin-left: auto;
-      align-self: flex-end; //Исправить
-    }
+  .recalls__btn {
+    align-self: baseline;
+    order: 2;
+    width: 170px;
+    margin-left: auto;
   }
 
   .recalls__title {
+    align-self: baseline;
+    margin-bottom: 20px;
+    margin-left: -5px;
     font-size: 43px;
   }
 
@@ -64,6 +74,7 @@
   .recalls__text {
     font-size: 17px;
     line-height: 1.76;
+    margin-bottom: 65px;
   }
 
   .recalls__footer {
@@ -71,7 +82,11 @@
     flex-direction: column;
   }
 
-  .slider-controls {
+  .recalls__author {
+    font-size: 17px;
+  }
+
+  .slider__controls {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -80,13 +95,21 @@
 
 @media @desktop-width {
 
+  .recalls {
+    margin-bottom: 282px;
+  }
+
   .recalls__title {
-    margin-left: 175px;
+    margin-left: 170px;
     font-size: 53px;
     line-height: 1.08;
   }
 
   .recalls__item {
     margin-left: 175px;
+  }
+
+  .recalls__text {
+    margin-bottom: 45px;
   }
 }

@@ -1,9 +1,10 @@
 .page-header {
-  margin-top: -10px;
+
 }
 
 .page-header__wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 320px;
   margin: 0 auto;
 }
@@ -12,5 +13,7 @@
 
   .page-header__wrapper {
     .container();
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

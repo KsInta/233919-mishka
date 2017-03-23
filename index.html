@@ -15,31 +15,38 @@
         </div>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button"></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link link" href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link link" href="#">Новые поступления</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link link" href="#">Распродажа</a>
-              </li>
-            </ul>
-            <ul class="main-nav__user-list">
-              <li class="main-nav__user-item">
-                <a class="main-nav__link main-nav__link--hidden link" href="#">Поиск по сайту</a>
-              </li>
-              <li class="main-nav__user-item">
-                <a class="main-nav__link link" href="#">Корзина: пока пуста</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--medium">
+              <a class="main-nav__link link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item main-nav__item--medium">
+              <a class="main-nav__link link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
         </nav>
+        <div class="offers">
+          <ul class="offers__list">
+            <li class="offers__item">
+              <a class="offers__link link" href="#">Новые поступления</a>
+            </li>
+            <li class="offers__item">
+              <a class="offers__link link" href="#">Распродажа</a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-block">
+          <ul class="user-block__list">
+            <li class="user-block__item">
+              <a class="user-block__link user-block__link--hidden link" href="#">Поиск по сайту</a>
+            </li>
+            <li class="user-block__item">
+              <a class="user-block__link link" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+        <div class="delivery">
+          <p class="delivery__item">Бесплатная доставка по России</p>
+        </div>
       </div>
     </header>
     <main class="page-content">
@@ -87,7 +94,7 @@
             </div>
             <div class="products-item__actions products-item__actions--product-of-week">
               <span class="products-item__price products-item__price--product-of-week">Цена: 990 руб.</span>
-              <a class="btn" href="#">Заказать</a>
+              <a class="btn btn--stretched" href="#">Заказать</a>
             </div>
           </div>
         </div>
@@ -121,7 +128,7 @@
             <button class="sliders-controls__prev"  type="button">prev</a>
             <button class="sliders-controls__next"  type="button">next</a>
           </div>
-          <a class="btn" href="#">Написать</a>
+          <a class="recalls__btn btn" href="#">Написать</a>
         </div>
       </section>
     </main>
@@ -136,14 +143,14 @@
             </div>
             <div class="contacts__property-item">
               <dt class="contacts__property-name">адрес:</dt>
-              <dd class="contacts__property-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
+              <dd class="contacts__property-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
             </div>
           </dl>
         </div>
         <div class="contacts__map-wrapper">
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1489478577177" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <a class="btn btn--centered" href="#">Напишите нам</a>
+        <a class="contacts__btn btn btn--centered" href="#">Напишите нам</a>
       </section>
       <section class="footer-links">
         <div class="footer-links__wrapper">
