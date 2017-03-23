@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 78px;
-    border-bottom: 2px solid #ececec;
+    min-height: 78px;
+    border-bottom: 1px solid #ececec;
   }
 
   &--footer {
@@ -18,10 +18,9 @@
   .logo {
 
     &--header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 10;
+      width: 90px;
+      height: 88px;
+      order: 1;
       border: none;
     }
 
@@ -36,8 +35,8 @@
   .logo {
 
     &--header {
-      left: 50%;
-      transform: translateX(-43px);
+      order: 2;
+      margin-left: 50px;
     }
   }
 }

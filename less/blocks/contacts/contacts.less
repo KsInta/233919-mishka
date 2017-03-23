@@ -1,12 +1,14 @@
 .contacts {
-  margin-bottom: 30px;
+  margin-bottom: 38px;
 }
 
 .contacts__list-wrapper {
   .container();
+  margin-bottom: -8px;
 }
 
 .contacts__title {
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 1.7;
 }
@@ -23,7 +25,7 @@
 }
 
 .contacts__property-name {
-  width: 60px;
+  width: 83px;
 }
 
 .contacts__property-value {
@@ -34,23 +36,52 @@
 .contacts__map {
   display: block;
   width: 100vw;
-  height: 50vh;
-  margin: 30px auto;
+  height: 78vh;
+  margin-bottom: 38px;
 }
 
 @media @tablet-width {
 
+  .contacts {
+    font-size: 17px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__list-wrapper {
+    padding-bottom: 5px;
+  }
+
   .contacts__title {
+    margin-bottom: 50px;
+    margin-left: -5px;
     font-size: 43px;
     line-height: 1.16;
   }
 
   .contacts__property-list {
     flex-direction: row;
+    margin-bottom: 30px;
   }
 
   .contacts__property-item {
-    margin-right: 70px;
+    margin-right: 25px;
+    line-height: 1.76;
+  }
+
+  .contacts__property-name {
+    width: 78px;
+  }
+
+  .contacts__property-value {
+    width: 230px;
+  }
+
+  .contacts__map {
+    margin-bottom: 55px;
+  }
+
+  .contacts__btn {
+    width: 225px;
   }
 }
 
@@ -59,28 +90,31 @@
   .contacts {
     .container();
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 105px;
 
     .btn {
       margin-left: 175px; //Исправить
     }
   }
 
+  .contacts__list-wrapper {
+    margin-bottom: 15px;
+  }
+
   .contacts__title {
-    margin-left: 175px;
+    margin-left: 170px;
     font-size: 53px;
     line-height: 1.08;
   }
 
   .contacts__property-list {
     flex-direction: column;
-    margin-bottom: 50px;
     margin-left: 175px;
   }
 
   .contacts__map {
     position: absolute;
-    top: -100px;
+    bottom: -50px;
     right: 0;
     width: 525px;
     height: 457px;
