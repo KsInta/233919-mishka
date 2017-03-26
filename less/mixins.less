@@ -1,18 +1,8 @@
-.container() {
-  width: 260px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin: 0 auto;
-
-  @media @tablet-width {
-    width: 668px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media @desktop-width {
-    width: 1050px;
-  }
+.container(@width; @padding: 30px; @margin: 0 auto) {
+  width: @width;
+  padding-right: @padding;
+  padding-left: @padding;
+  margin: @margin @margin;
 }
 
 .list-reset() {

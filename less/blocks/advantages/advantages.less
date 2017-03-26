@@ -4,7 +4,7 @@
 }
 
 .advantages__wrapper {
-  .container();
+  .container(260px);
 }
 
 .advantages__title {
@@ -24,26 +24,91 @@
 }
 
 .advantages__item {
+  position: relative;
   width: 250px;
   margin-bottom: 23px;
   padding-top: 60px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  &--feature-1 {
+
+    &::before {
+      width: 32px;
+      height: 38px;
+      background-image: url('../less/blocks/advantages/icon-feature-1.svg');
+    }
+  }
+
+  &--feature-2 {
+
+    &::before {
+      width: 47px;
+      height: 27px;
+      background-image: url('../less/blocks/advantages/icon-feature-3.svg');
+    }
+  }
+
+  &--feature-3 {
+
+    &::before {
+      width: 33px;
+      height: 28px;
+      background-image: url('../less/blocks/advantages/icon-feature-5.svg');
+    }
+  }
+
+  &--feature-4 {
+
+    &::before {
+      width: 35px;
+      height: 34px;
+      background-image: url('../less/blocks/advantages/icon-feature-2.svg');
+    }
+  }
+
+  &--feature-5 {
+
+    &::before {
+      width: 55px;
+      height: 23px;
+      background-image: url('../less/blocks/advantages/icon-feature-4.svg');
+    }
+  }
+
+  &--feature-6 {
+
+    &::before {
+      width: 33px;
+      height: 32px;
+      background-image: url('../less/blocks/advantages/icon-feature-6.svg');
+    }
+  }
 }
 
 
 @media @tablet-width {
-
   .advantages {
-
     margin-bottom: 70px;
 
     &::before {
       content: '';
       position: absolute;
-      top: -50px;
+      top: -60px;
+      z-index: 5;
       width: 100%;
       height: 17px;
-      background-image: url("../../../img/zigzag-line-tablet.png");
+      background-image: url('../less/blocks/advantages/bg-zigzag-line.svg');
     }
+  }
+
+  .advantages__wrapper {
+    .container(668px; 50px);
   }
 
   .advantages__title {
@@ -96,14 +161,17 @@
 }
 
 @media @desktop-width {
-
   .advantages {
     margin-bottom: 60px;
 
     &::before {
+      top: -80px;
       height: 23px;
-      background-image: url("../../../img/zigzag-line-desktop.png");
     }
+  }
+
+  .advantages__wrapper {
+    .container(1050px; 50px);
   }
 
   .advantages__title {
@@ -113,7 +181,6 @@
   }
 
   .advantages__list {
-
     margin-left: 175px;
     align-items: stretch;
   }

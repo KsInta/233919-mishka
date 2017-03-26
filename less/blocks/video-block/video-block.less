@@ -3,14 +3,51 @@
 }
 
 .video-block__wrapper {
-  width: 260px;
-  margin: 0 auto;
-  border: 1px solid #ededed;
+  .container(260px; 0);
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid #ededed;
+}
+
+.video-block__player {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100.678px;
+    height: 76.891px;
+    transform: translate(-50.4px, -38.5px);
+    background-image: url(../less/blocks/video-block/icon-play.svg);
+    transition: all 0.2s ease-out;
+  }
+
+  &:hover::before {
+    transform: translate(-50.4px, -38.5px) scale(1.2);
+  }
+
+  &:active::before {
+    transform: translate(-50.4px, -38.5px) scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 .video-block__title {
+  position: relative;
   font-size: 17px;
   line-height: 1.4;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 32px;
+    width: 32px;
+    height: 32px;
+    background-image: url('../less/blocks/video-block/icon-video.svg');
+  }
 }
 
 .video-block__photo {
@@ -31,7 +68,6 @@
 }
 
 @media @mobile-width-only {
-
   .video-block__wrapper {
     position: relative;
   }
@@ -56,11 +92,8 @@
 }
 
 @media @tablet-width {
-
   .video-block__wrapper {
-    .container();
-    display: flex;
-    flex-direction: column;
+    .container(668px; 0);
   }
 
   .video-block__photo {
@@ -79,12 +112,26 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 22px 41px;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .video-block__title {
     padding-left: 65px;
     font-size: 20px;
     line-height: 1.2;
+
+    &::before {
+      top: -5px;
+      left: 0px;
+    }
   }
 
   .video-block__descr {
@@ -99,13 +146,14 @@
 }
 
 @media @desktop-width {
-
   .video-block {
     margin-bottom: 100px;
   }
 
   .video-block__wrapper {
+    .container(1050px; 0);
     flex-direction: row;
+    max-height: 455px;
   }
 
   .video-block__player {
@@ -113,7 +161,7 @@
   }
 
   .video-block__descr-wrapper {
-    flex-basis: 230px;
+    width: 233px;
     padding-top: 27px;
     padding-right: 55px;
     padding-left: 80px;
