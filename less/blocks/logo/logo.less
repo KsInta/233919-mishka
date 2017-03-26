@@ -4,8 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 86px;
     min-height: 78px;
-    border-bottom: 1px solid #ececec;
+    margin: auto;
   }
 
   &--footer {
@@ -13,13 +14,24 @@
   }
 }
 
-@media @tablet-width {
+.logo__link {
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media @tablet-width {
   .logo {
 
     &--header {
-      width: 90px;
+      width: 113px;
       height: 88px;
+      margin-left: 0;
       order: 1;
       border: none;
     }
@@ -28,15 +40,26 @@
       display: block;
     }
   }
+
+  .logo__link--footer {
+
+    &:hover .logo__svg {
+      fill: @accent-color;
+    }
+
+    &:active .logo__svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media @desktop-width {
-
   .logo {
 
     &--header {
       order: 2;
-      margin-left: 50px;
+      width: 149px;
+      margin-left: 20px;
     }
   }
 }

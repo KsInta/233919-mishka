@@ -1,5 +1,36 @@
 .copyright {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 185px;
   height: 80px;
+  font-family: @open-sans-bold;
+  font-size: 19px;
+  color: @title-color;
+}
+
+.copyright__link {
+  position: relative;
+  padding-right: 55px;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 27px;
+    height: 34px;
+    background-image: url('../less/blocks/copyright/htmlacademy.svg');
+    background-size: 27px 34px;
+  }
+
+  &:hover::after {
+    background-image: url('../less/blocks/copyright/htmlacademy-green.svg');
+    background-size: 27px 34px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

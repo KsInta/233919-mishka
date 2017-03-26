@@ -1,0 +1,42 @@
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__btn {
+  width: 50%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #ececec;
+  outline-color: transparent;
+  cursor: pointer;
+
+  &--next {
+    border-left-color: transparent;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media @tablet-width {
+  .slider__controls {
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+    width: 167px;
+  }
+
+  .slider__btn {
+    width: 50px;
+    height: 26px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+  }
+}

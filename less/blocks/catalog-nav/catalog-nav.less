@@ -13,6 +13,8 @@
 }
 
 .catalog-nav__link {
+  position: relative;
+  z-index: 5;
   display: block;
   padding-top: 28px;
   padding-bottom: 30px;
@@ -20,24 +22,60 @@
   font-size: 19px;
   line-height: 1.26;
   color: white;
-  background-color: @accent-color;
+
+  &--green {
+    background-color: @accent-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      width: 40px;
+      height: 62px;
+      background-image: url(../less/blocks/catalog-nav/icon-interior.svg);
+      opacity: 0.5;
+    }
+  }
 
   &--dark-green {
     background-color: #56c3b2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 22px;
+      right: 28px;
+      width: 61px;
+      height: 60px;
+      background-image: url(../less/blocks/catalog-nav/icon-toy.svg);
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
 
 @media @tablet-width {
-
   .catalog-nav {
     position: relative;
-    margin-top: -110px;
+    z-index: 2;
+    margin-top: -120px;
     margin-bottom: 10px;
   }
 
   .catalog-nav__wrapper {
-    .container();
+    .container(668px; 50px);
   }
 
   .catalog-nav__list {
@@ -58,8 +96,11 @@
 }
 
 @media @desktop-width {
-
   .catalog-nav {
     margin-bottom: 80px;
+  }
+
+  .catalog-nav__wrapper {
+    .container(1050px; 50px);
   }
 }
