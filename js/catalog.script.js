@@ -40,4 +40,3 @@ window.addEventListener("keydown", function(event) {
     overlay.classList.remove('overlay--display');
   }
 });
-

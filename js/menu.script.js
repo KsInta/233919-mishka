@@ -17,8 +17,3 @@ menu_condition.addEventListener("click", function(event) {
     main_nav.classList.add('main-nav--closed');
   }
 });
-
-
-
-
-
