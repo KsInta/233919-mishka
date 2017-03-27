@@ -1,17 +1,21 @@
 .link {
   text-decoration: none;
   color: @title-color;
-}
 
-.link--border {
-  color: inherit;
-  border-bottom: 1px solid #62d1ba;
+  &--border {
+    color: inherit;
+    border-bottom: 1px solid #62d1ba;
 
-  &:hover {
-    color: #46c1ae;
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  &:active {
-    opacity: 0.3;
+  &--hidden {
+    font-size: 0;
   }
 }
