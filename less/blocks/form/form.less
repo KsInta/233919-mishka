@@ -27,8 +27,8 @@
   }
 
   &--order {
-    margin-top: 30px;
-    margin-bottom: -20px;
+    margin-top: 43px;
+    margin-bottom: 30px;
   }
 }
 
@@ -39,12 +39,12 @@
 }
 
 .form__fieldset {
-  margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   border: none;
 
   &--medium-margin {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &--email {
@@ -52,7 +52,7 @@
   }
 
   &--textarea {
-    margin-bottom: 21px;
+    margin-bottom: 28px;
   }
 
   &--stretched {
@@ -71,7 +71,7 @@
 
 .form__descr-wrapper {
   .container(260px);
-  margin-bottom: 8px;
+  margin-bottom: -5px;
   font-size: 13px;
   line-height: 1.84;
 }
@@ -87,36 +87,16 @@
 
   &--full-width {
     .container(260px);
+    position: relative;
     flex-direction: column;
   }
 }
 
 .form__fieldset-title {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 32px;
   font-family: @open-sans-bold;
   font-size: 17px;
   text-transform: uppercase;
   color: @accent-color;
-
-  &--small-margin {
-    margin-bottom: 23px;
-  }
-
-  &--tiny-margin {
-    margin-top: 6px;
-    margin-bottom: 2px;
-  }
-
-  &::after {
-    content: '';
-    position: relative;
-    top: -12px;
-    z-index: 1;
-    display: block;
-    border-bottom: 1px solid @accent-color;
-  }
 }
 
 .form__list {
@@ -222,8 +202,8 @@
 .form__icon-mail {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 10px;
+  right: -5px;
+  bottom: 12px;
   fill: rgba(0, 0, 0, 0.2);
 }
 
@@ -310,6 +290,51 @@
   font-size: 14px;
 }
 
+@media @mobile-width-only {
+  .form__fieldset-title {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    padding-right: 27px;
+      text-align: center;
+    background-color: white;
+  }
+
+  .form__fieldset-title-wrapper {
+    margin-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: relative;
+      top: -27px;
+      z-index: 1;
+      display: block;
+      border-bottom: 1px solid @accent-color;
+    }
+
+    &--small-margin {
+      margin-bottom: 8px;
+    }
+
+    &--tiny-margin {
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    &--tiny-margin::after {
+      top: -10px;
+    }
+
+    &--textarea-margin {
+      margin-bottom: 37px;
+    }
+
+    &--textarea-margin::after {
+      top: -10px;
+    }
+  }
+}
+
 @media @tablet-width {
   .form {
 
@@ -336,7 +361,7 @@
   }
 
   .form__title {
-    width: 360px;
+    width: 365px;
     font-size: 30px;
     line-height: 1.9;
   }
@@ -392,6 +417,7 @@
   }
 
   .form__fieldset-title {
+    display: block;
     width: 167px;
 
     &::after {
@@ -428,7 +454,7 @@
 
     &--column {
       flex-basis: 240px;
-      margin-right: 23px;
+      margin-right: 21px;
       margin-bottom: 53px;
     }
 

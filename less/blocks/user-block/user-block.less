@@ -1,5 +1,4 @@
 .user-block {
-  flex-direction: column;
   font-family: @open-sans-bold;
   font-size: 17px;
 }
@@ -12,15 +11,61 @@
 
 .user-block__item {
   display: flex;
+  align-items: center;
   min-height: 78px;
   line-height: 1.4;
-  text-align: center;
   border-bottom: 1px solid #ececec;
 }
 
 .user-block__link {
-  margin: auto;
+  margin-left: 30px;
+  padding-left: 45px;
   color: @title-color;
+
+  &--hidden {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: url('../img/user-block/icon-search.svg');
+      background-repeat: no-repeat;
+    }
+
+    &:hover::before {
+      background-image: url('../img/user-block/icon-search-green.svg');
+    }
+
+     &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--cart {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 20px;
+      height: 19px;
+      background-image: url('../img/icon-cart.svg');
+    }
+
+    &:hover::before {
+      background-image: url('../img/icon-cart-green.svg');
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
@@ -28,12 +73,6 @@
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media @mobile-width-only {
-  .user-block__list--display-none {
-    display: none;
   }
 }
 
@@ -57,55 +96,19 @@
 
     &--hidden {
       position: relative;
+      width: 82px;
       min-height: 88px;
+      margin: 0;
+      padding: 0;
       border-right: 1px solid #ececec;
       border-left: 1px solid #ececec;
       font-size: 0;
 
       &::before {
-        content: '';
-        position: absolute;
         top: 50%;
         left: 50%;
-        width: 18px;
-        height: 18px;
         transform: translate(-9px, -9px);
-        background-image: url('../img/user-block/icon-search.svg');
-      }
-
-      &:hover::before {
-        background-image: url('../img/user-block/icon-search-green.svg');
-      }
-
-      &:active::before {
-        opacity: 0.3;
       }
     }
-
-    &--cart {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 30px;
-        width: 21px;
-        height: 19px;
-        background-image: url('../img/icon-cart.svg');
-      }
-
-      &:hover::before {
-        background-image: url('../img/icon-cart-green.svg');
-      }
-
-      &:active::before {
-        opacity: 0.3;
-      }
-    }
-  }
-
-  .user-block__link {
-    padding-left: 82px;
   }
 }

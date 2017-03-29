@@ -1,6 +1,7 @@
 .slider__controls {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 38px;
 }
 
 .slider__btn {
@@ -27,7 +28,7 @@
 @media @tablet-width {
   .slider__controls {
     position: absolute;
-    right: 60px;
+    right: 70px;
     bottom: 10px;
     width: 167px;
   }
@@ -38,5 +39,11 @@
     margin-left: 20px;
     margin-right: 20px;
     border: none;
+  }
+}
+
+@media @desktop-width {
+  .slider__controls {
+    bottom: 60px;
   }
 }
