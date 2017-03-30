@@ -27,7 +27,6 @@
   margin-left: 75px;
   text-align: center;
   color: @title-color;
-
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
@@ -35,6 +34,12 @@
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.main-nav__link-active {
+  margin-left: 75px;
+  text-align: center;
+  color: @title-color;
 }
 
 @media @mobile-width-only {
@@ -46,7 +51,6 @@
     height: 30px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
 
     &::before {
       content: '';
@@ -138,6 +142,10 @@
     margin-left: 0;
   }
 
+  .main-nav__link-active {
+    margin-left: 0;
+  }
+
   .main-nav__user-list {
     flex-direction: row;
     align-self: flex-end;
@@ -156,7 +164,6 @@
 
   .main-nav__list {
     width: 440px;
-
   }
 
   .main-nav__item {
