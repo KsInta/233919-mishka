@@ -79,12 +79,12 @@ gulp.task("clean", function(){
 gulp.task("html:copy", function() {
   return gulp.src("*html")
   .pipe(gulp.dest("build"));
-})
+});
 
 gulp.task("html:update", ["html:copy"], function(done){
   server.reload();
   done();
-})
+});
 
 gulp.task("serve", function() {
   server.init({

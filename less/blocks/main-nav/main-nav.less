@@ -27,6 +27,7 @@
   margin-left: 75px;
   text-align: center;
   color: @title-color;
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
@@ -47,15 +48,19 @@
     position: absolute;
     top: -55px;
     right: 25px;
+    z-index: -1;
     width: 30px;
     height: 30px;
     background-color: transparent;
     border: none;
 
-    &::before {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
+      top: 14px;
       left: 5px;
+      z-index: 5;
       width: 20px;
       height: 2px;
       background-color: @title-color;
@@ -68,12 +73,6 @@
 
     &::before,
     &::after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      width: 20px;
-      height: 2px;
-      background-color: @title-color;
       box-shadow: none;
       transition: all 0.1s ease-out;
     }
@@ -134,15 +133,18 @@
 
   .main-nav__item {
     justify-content: flex-start;
+    align-items: flex-start;
     width: 175px;
     min-height: 59px;
   }
 
   .main-nav__link {
+    margin-top: 20px;
     margin-left: 0;
   }
 
   .main-nav__link-active {
+    margin-top: 20px;
     margin-left: 0;
   }
 
@@ -174,5 +176,13 @@
     &:first-child {
       border-right: 1px solid #ececec;
     }
+  }
+
+  .main-nav__link {
+    margin-top: 32px;
+  }
+
+  .main-nav__link-active {
+    margin-top: 32px;
   }
 }

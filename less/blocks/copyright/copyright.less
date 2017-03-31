@@ -4,6 +4,8 @@
   align-items: center;
   width: 185px;
   height: 80px;
+  margin: auto;
+
   font-family: @open-sans-bold;
   font-size: 19px;
   color: @title-color;
@@ -32,5 +34,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media @tablet-width {
+  .copyright {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
