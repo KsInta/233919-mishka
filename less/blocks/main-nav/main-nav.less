@@ -28,6 +28,13 @@
   text-align: center;
   color: @title-color;
 
+  &--active {
+    margin-left: 75px;
+    text-align: center;
+    color: @title-color;
+    text-decoration: none;
+  }
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
@@ -37,10 +44,86 @@
   }
 }
 
-.main-nav__link-active {
-  margin-left: 75px;
-  text-align: center;
+.main-nav--user-block {
+  font-family: @open-sans-bold;
+  font-size: 17px;
+}
+
+.main-nav__user-block-list {
+  display: flex;
+  flex-direction: column;
+  .list-reset();
+}
+
+.main-nav__user-block-item {
+  display: flex;
+  align-items: center;
+  min-height: 78px;
+  line-height: 1.4;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__user-block-link {
+  margin-left: 30px;
+  padding-left: 45px;
   color: @title-color;
+
+  &--hidden {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: url('../img/user-block/icon-search.svg');
+      background-repeat: no-repeat;
+    }
+
+    &:hover::before {
+      background-image: url('../img/user-block/icon-search-green.svg');
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--cart {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 20px;
+      height: 19px;
+      background-image: url('../img/icon-cart.svg');
+    }
+
+    &:hover::before {
+      background-image: url('../img/icon-cart-green.svg');
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.main-nav--offers {
+  display: none;
 }
 
 @media @mobile-width-only {
@@ -90,7 +173,7 @@
     display: none;
   }
 
-  .main-nav ~ .user-block {
+  .main-nav ~ .main-nav--user-block {
     display: none;
   }
 
@@ -102,7 +185,7 @@
     background-color: white;
   }
 
-  .main-nav--opened ~ .user-block {
+  .main-nav--opened ~ .main-nav--user-block {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -116,7 +199,6 @@
 @media @tablet-width {
   .main-nav {
     order: 3;
-    font-size: 15px;
     min-height: 59px;
   }
 
@@ -129,6 +211,7 @@
     align-items: flex-start;
     order: 2;
     width: 334px;
+    font-size: 15px;
   }
 
   .main-nav__item {
@@ -141,11 +224,11 @@
   .main-nav__link {
     margin-top: 20px;
     margin-left: 0;
-  }
 
-  .main-nav__link-active {
-    margin-top: 20px;
-    margin-left: 0;
+    &--active {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 
   .main-nav__user-list {
@@ -156,16 +239,55 @@
   .main-nav__item {
     border: none;
   }
+
+  .main-nav--user-block {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .main-nav__user-block-list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+  }
+
+  .main-nav__user-block-item {
+    border: none;
+  }
+
+  .main-nav__user-block-link {
+
+    &--hidden {
+      position: relative;
+      width: 82px;
+      min-height: 88px;
+      margin: 0;
+      padding: 0;
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+      font-size: 0;
+
+      &::before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-9px, -9px);
+      }
+    }
+
+    &--cart {
+      margin-left: auto;
+    }
+  }
 }
 
 @media @desktop-width {
   .main-nav {
     order: 1;
-    font-size: 17px;
   }
 
   .main-nav__list {
     width: 440px;
+    font-size: 17px;
   }
 
   .main-nav__item {
@@ -180,9 +302,48 @@
 
   .main-nav__link {
     margin-top: 32px;
+
+    &--active {
+      margin-top: 32px;
+    }
   }
 
-  .main-nav__link-active {
-    margin-top: 32px;
+  .main-nav--user-block {
+    order: 3;
+  }
+
+  .main-nav--offers {
+    display: flex;
+    order: 4;
+    z-index: 5;
+    min-height: 59px;
+    font-family: @open-sans-bold;
+    font-size: 15px;
+    color: @title-color;
+  }
+
+  .main-nav__offers-list {
+    .list-reset();
+    display: flex;
+  }
+
+  .main-nav__offers-item {
+    display: flex;
+    width: 175px;
+    margin-right: 45px;
+  }
+
+  .main-nav__offers-link {
+    margin-top: 23px;
+    margin-left: 0;
+    color: @title-color;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 }

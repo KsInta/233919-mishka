@@ -26,11 +26,13 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="logo logo--header">
+          <a>
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
-              <img src="img/logo/logo-mobile.svg" alt="Мишка">
+              <img src="img/logo/logo-mobile.svg" width="86" height="36" alt="Мишка">
             </picture>
+          </a>
         </div>
         <nav class="main-nav no-js">
           <button class="main-nav__toggle" type="button"></button>
@@ -43,23 +45,23 @@
             </li>
           </ul>
         </nav>
-        <nav class="offers">
-          <ul class="offers__list">
-            <li class="offers__item">
-              <a class="offers__link link" href="#">Новые поступления</a>
+        <nav class="main-nav main-nav--offers">
+          <ul class="main-nav__offers-list">
+            <li class="main-nav__offers-item">
+              <a class="main-nav__offers-link link" href="new-offers.html">Новые поступления</a>
             </li>
-            <li class="offers__item">
-              <a class="offers__link link" href="#">Распродажа</a>
+            <li class="main-nav__offers-item">
+              <a class="main-nav__offers-link link" href="sale.html">Распродажа</a>
             </li>
           </ul>
         </nav>
-        <nav class="user-block">
-          <ul class="user-block__list">
-            <li class="user-block__item">
-              <a class="user-block__link user-block__link--hidden link" href="#">Поиск по сайту</a>
+        <nav class="main-nav main-nav--user-block">
+          <ul class="main-nav__user-block-list">
+            <li class="main-nav__user-block-item">
+              <a class="main-nav__user-block-link main-nav__user-block-link--hidden link" href="#">Поиск по сайту</a>
             </li>
-            <li class="user-block__item">
-              <a class="user-block__link user-block__link--cart link" href="#">Корзина: пока пуста</a>
+            <li class="main-nav__user-block-item">
+              <a class="main-nav__user-block-link main-nav__user-block-link--cart link" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </nav>
