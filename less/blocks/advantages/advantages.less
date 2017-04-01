@@ -1,6 +1,16 @@
 .advantages {
   position: relative;
   margin-bottom: 16px;
+
+  &::before {
+      content: '';
+      position: absolute;
+      top: -38px;
+      z-index: 5;
+      width: 100%;
+      height: 7px;
+      background-image: url('../img/sm-zigzag-line.svg');
+    }
 }
 
 .advantages__wrapper {
@@ -8,7 +18,7 @@
 }
 
 .advantages__title {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   font-size: 25px;
   line-height: 1.2;
 }
@@ -39,6 +49,7 @@
   &--feature-1 {
 
     &::before {
+      left: 8px;
       width: 32px;
       height: 38px;
       background-image: url('../img/advantages/icon-feature-1.svg');
@@ -48,6 +59,7 @@
   &--feature-2 {
 
     &::before {
+      left: 2px;
       width: 47px;
       height: 27px;
       background-image: url('../img/advantages/icon-feature-3.svg');
@@ -57,6 +69,8 @@
   &--feature-3 {
 
     &::before {
+      top: 10px;
+      left: 8px;
       width: 33px;
       height: 28px;
       background-image: url('../img/advantages/icon-feature-5.svg');
@@ -66,6 +80,7 @@
   &--feature-4 {
 
     &::before {
+      top: 7px;
       width: 35px;
       height: 34px;
       background-image: url('../img/advantages/icon-feature-2.svg');
@@ -75,6 +90,8 @@
   &--feature-5 {
 
     &::before {
+      top: 10px;
+      left: -5px;
       width: 55px;
       height: 23px;
       background-image: url('../img/advantages/icon-feature-4.svg');
@@ -84,6 +101,7 @@
   &--feature-6 {
 
     &::before {
+      top: 7px;
       width: 33px;
       height: 32px;
       background-image: url('../img/advantages/icon-feature-6.svg');
@@ -97,11 +115,7 @@
     margin-bottom: 28px;
 
     &::before {
-      content: '';
-      position: absolute;
       top: -70px;
-      z-index: 5;
-      width: 100%;
       height: 17px;
       background-image: url('../img/md-zigzag-line.svg');
     }
