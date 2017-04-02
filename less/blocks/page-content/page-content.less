@@ -1,4 +1,5 @@
 .page-content__title-wrapper {
+  border-top: 1px solid #ececec;
 
   &--background-image {
     background-color: #fafafa;
@@ -11,7 +12,7 @@
 }
 
 .page-content__title {
-  width: 250px;
+  width: 255px;
   margin: 0 auto;
   padding-right: 38px;
   padding-left: 38px;
@@ -23,14 +24,19 @@
     min-height: 210px;
     padding-top: 70px;
     color: @title-color;
-    background: #f1f1f1 url('../less/blocks/page-content/hero-mobile@1x.jpg') no-repeat;
+    background: #f1f1f1 url('../img/page-content/hero-mobile@1x.jpg') no-repeat;
     background-position: center -20px;
+  }
 
-    @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx) {
-      background: url('../less/blocks/page-content/hero-mobile@2x.jpg');
-      background-size: 575px auto;
-      background-position: center -20px;
+  @media (min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+      .page-content__title {
+
+        &--background-image {
+          background: url('../img/page-content/hero-mobile@2x.jpg') no-repeat;
+          background-size: 575px auto;
+          background-position: center -20px;
+      }
     }
   }
 
@@ -44,7 +50,6 @@
   .page-content__title-wrapper {
     position: relative;
     margin-top: -60px;
-    border-top: 1px solid #ececec;
 
     &::after {
       content: '';
@@ -53,7 +58,7 @@
       z-index: 5;
       width: 100%;
       height: 24px;
-      background-image: url('../less/blocks/catalog-nav/bg-zigzag-fill.svg');
+      background-image: url('../img/md-zigzag-fill.svg');
     }
   }
 
@@ -67,12 +72,12 @@
     &--background-image {
       min-height: 590px;
       padding-top: 155px;
-      background: url('../less/blocks/page-content/hero-desktop@1x.jpg') no-repeat;
+      background: url('../img/page-content/hero-desktop@1x.jpg') no-repeat;
       background-position: center 0;
 
       @media (min-resolution: 144dpi),
               (min-resolution: 1.5dppx) {
-        background: url('../less/blocks/page-content/hero-desktop@2x.jpg') no-repeat;
+        background: url('../img/page-content/hero-desktop@2x.jpg') no-repeat;
         background-size: 1150px auto;
         background-position: center 0;
       }
@@ -83,7 +88,7 @@
     }
 
     &--background-grey {
-      min-height: 126px;
+      min-height: 136px;
       padding-top: 95px;
       padding-left: 137px;
     }
@@ -96,13 +101,14 @@
     &::after {
       bottom: -15px;
       height: 34px;
+      background-image: url('../img/bg-zigzag-fill.svg');
     }
   }
 
   .page-content__title {
     width: 750px;
     padding-right: 200px;
-    padding-left: 200px;
+    padding-left: 202px;
     font-size: 53px;
     line-height: 1.1;
 
@@ -111,7 +117,7 @@
     }
 
     &--background-grey {
-      height: 151px;
+      min-height: 160px;
       border-top: 100px;
     }
   }

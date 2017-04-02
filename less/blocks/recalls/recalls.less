@@ -1,5 +1,5 @@
 .recalls {
-  margin-bottom: 88px;
+  margin-bottom: 86px;
 }
 
 .recalls__wrapper {
@@ -10,22 +10,25 @@
 
 .recalls__title {
   margin-bottom: -5px;
+  order: 1;
 }
 
 .recalls__item {
+  order: 2;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
   margin-left: 0;
 }
 
 .recalls__text {
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
   margin-left: 0;
   line-height: 2;
 }
 
 .recalls__author {
+  margin-bottom: 5px;
   font-family: @open-sans-bold;
   font-size: 18px;
   font-style: normal;
@@ -36,13 +39,13 @@
   line-height: 1.76;
 }
 
-.slider__controls {
-  margin-bottom: 50px;
+.recalls__btn {
+  order: 4;
 }
 
 @media @tablet-width {
   .recalls {
-    margin-bottom: 150px;
+    margin-bottom: 141px;
   }
 
   .recalls__wrapper {
@@ -50,30 +53,43 @@
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 42px;
+    padding-bottom: 15px;
+    background-repeat: no-repeat;
+    background-image: url('../img/recalls/review@1x.jpg');
+    background-size: 350px auto;
+
+    @media (min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+      background-image: url('../img/recalls/review@2x.jpg');
+    }
   }
 
   .recalls__btn {
-    align-self: baseline;
+    align-self: center;
     order: 2;
     width: 170px;
+    margin-top: 24px;
     margin-left: auto;
   }
 
   .recalls__title {
     align-self: baseline;
-    margin-bottom: 20px;
+    order: 1;
+    margin-bottom: 17px;
     margin-left: -5px;
     font-size: 43px;
   }
 
   .recalls__item {
     order: 3;
+    margin-right: 0;
   }
 
   .recalls__text {
     font-size: 17px;
-    line-height: 1.76;
-    margin-bottom: 65px;
+    line-height: 1.8;
+    margin-bottom: 61px;
   }
 
   .recalls__footer {
@@ -88,15 +104,19 @@
 
 @media @desktop-width {
   .recalls {
-    margin-bottom: 282px;
+    margin-bottom: 220px;
   }
 
   .recalls__wrapper {
     .container(1050px; 50px);
+    padding-top: 28px;
+    padding-bottom: 70px;
+    background-position: 50px 0;
   }
 
   .recalls__title {
     margin-left: 170px;
+    margin-bottom: 17px;
     font-size: 53px;
     line-height: 1.08;
   }
@@ -106,6 +126,11 @@
   }
 
   .recalls__text {
-    margin-bottom: 45px;
+    width: 800px;
+    margin-bottom: 42px;
+  }
+
+  .recalls__btn {
+    margin-top: 40px;
   }
 }

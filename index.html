@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <svg style="display:none">
@@ -21,13 +26,15 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="logo logo--header">
+          <a>
             <picture>
-              <source media="(min-width: 1150px)" srcset="less/blocks/logo/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="less/blocks/logo/logo-tablet.svg">
-              <img src="less/blocks/logo/logo-mobile.svg" width="149" height="72">
+              <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+              <img src="img/logo/logo-mobile.svg" width="86" height="36" alt="Мишка">
             </picture>
+          </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav no-js">
           <button class="main-nav__toggle" type="button"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--medium">
@@ -38,23 +45,23 @@
             </li>
           </ul>
         </nav>
-        <nav class="offers">
-          <ul class="offers__list">
-            <li class="offers__item">
-              <a class="offers__link link" href="#">Новые поступления</a>
+        <nav class="main-nav main-nav--offers">
+          <ul class="main-nav__offers-list">
+            <li class="main-nav__offers-item">
+              <a class="main-nav__offers-link link" href="new-offers.html">Новые поступления</a>
             </li>
-            <li class="offers__item">
-              <a class="offers__link link" href="#">Распродажа</a>
+            <li class="main-nav__offers-item">
+              <a class="main-nav__offers-link link" href="sale.html">Распродажа</a>
             </li>
           </ul>
         </nav>
-        <nav class="user-block">
-          <ul class="user-block__list">
-            <li class="user-block__item">
-              <a class="user-block__link user-block__link--hidden link" href="#">Поиск по сайту</a>
+        <nav class="main-nav main-nav--user-block">
+          <ul class="main-nav__user-block-list">
+            <li class="main-nav__user-block-item">
+              <a class="main-nav__user-block-link main-nav__user-block-link--hidden link" href="#">Поиск по сайту</a>
             </li>
-            <li class="user-block__item">
-              <a class="user-block__link link user-block__link--cart" href="#">Корзина: пока пуста</a>
+            <li class="main-nav__user-block-item">
+              <a class="main-nav__user-block-link main-nav__user-block-link--cart link" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </nav>
@@ -71,10 +78,10 @@
         <div class="catalog-nav__wrapper">
           <ul class="catalog-nav__list">
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link link catalog-nav__link--green" href="#">Предметы<br> интерьера</a>
+              <a class="catalog-nav__link link catalog-nav__link--green" href="catalog-interior.html">Предметы<br> интерьера</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link link catalog-nav__link--dark-green" href="#">Детские<br> игрушки</a>
+              <a class="catalog-nav__link link catalog-nav__link--dark-green" href="catalog-toys.html">Детские<br> игрушки</a>
             </li>
           </ul>
         </div>
@@ -103,14 +110,14 @@
             </dl>
             <div class="products-item__image products-item__image--product-of-week">
               <picture>
-                <source media="(min-width: 1150px)" srcset="less/blocks/products-item/triple-set-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="less/blocks/products-item/triple-set-tablet@1x.jpg">
-                <img src="less/blocks/products-item/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+                <source media="(min-width: 1150px)" srcset="img/products-item/triple-set-desktop@1x.jpg 1x, img/products-item/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/products-item/triple-set-tablet@1x.jpg 1x, img/products-item/triple-set-tablet@2x.jpg 2x">
+                <img src="img/products-item/triple-set-mobile@1x.jpg" srcset="img/products-item/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
               </picture>
             </div>
             <div class="products-item__actions products-item__actions--product-of-week">
               <span class="products-item__price products-item__price--product-of-week">Цена: 990 руб.</span>
-              <a class="btn btn--stretched" href="#">Заказать</a>
+              <a class="btn btn--stretched" id="product-of-week" href="#">Заказать</a>
             </div>
           </div>
         </div>
@@ -119,18 +126,19 @@
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Коротко о нас:</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--feature-1">Экологически чистые материалы</li>
-            <li class="advantages__item advantages__item--feature-2">Скандинавский стиль по российской цене</li>
-            <li class="advantages__item advantages__item--feature-3">Увеличивает лайки на фотографиях</li>
+            <li class="advantages__item advantages__item--feature-1">Экологически<br> чистые материалы</li>
+            <li class="advantages__item advantages__item--feature-2">Скандинавский стиль<br> по российской цене</li>
+            <li class="advantages__item advantages__item--feature-3">Увеличивает лайки<br> на фотографиях</li>
             <li class="advantages__item advantages__item--feature-4">Связано вручную с любовью и умилением</li>
             <li class="advantages__item advantages__item--feature-5">Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--feature-6">Поставляется в подарочной упаковке</li>
+            <li class="advantages__item advantages__item--feature-6">Поставляется в<br> подарочной упаковке</li>
           </ul>
         </div>
       </section>
       <section class="recalls slider">
         <div class="recalls__wrapper">
           <h2 class="recalls__title">Отзывы</h2>
+          <a class="recalls__btn btn" href="recalls.html">Написать</a>
           <figure class="recalls__item">
             <blockquote class="recalls__text">
             Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
@@ -152,36 +160,35 @@
               </svg>
             </button>
           </div>
-          <a class="recalls__btn btn" href="#">Написать</a>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="contacts">
-        <div class="contacts__wrapper">
-          <div class="contacts__list-wrapper">
-            <h2 class="contacts__title">Контакты</h2>
-            <dl class="contacts__property-list">
-              <div class="contacts__property-item">
-                <dt class="contacts__property-name ">e-mail:</dt>
-                <dd class="contacts__property-value"><a class="link link--border" href="#">info@mimimishkashop.ru</a></dd>
+      <section class="page-footer__contacts">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__list-wrapper">
+            <h2 class="page-footer__title">Контакты</h2>
+            <dl class="page-footer__property-list">
+              <div class="page-footer__property-item">
+                <dt class="page-footer__property-name ">e-mail:</dt>
+                <dd class="page-footer__property-value"><a class="link link--border" href="#">info@mimimishkashop.ru</a></dd>
               </div>
-              <div class="contacts__property-item">
-                <dt class="contacts__property-name">адрес:</dt>
-                <dd class="contacts__property-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
+              <div class="page-footer__property-item">
+                <dt class="page-footer__property-name">адрес:</dt>
+                <dd class="page-footer__property-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
               </div>
             </dl>
           </div>
-          <div class="contacts__map-wrapper">
-            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1489478577177" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="page-footer__map-wrapper">
+            <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1489478577177" allowfullscreen></iframe>
           </div>
-          <a class="contacts__btn btn btn--centered" href="#">Напишите нам</a>
+          <a class="page-footer__btn btn btn--centered" href="feedback.html">Напишите нам</a>
         </div>
       </section>
-      <section class="footer-links">
-        <div class="footer-links__wrapper">
+      <section class="page-footer__links">
+        <div class="page-footer__wrapper page-footer__wrapper--links">
           <div class="logo logo--footer">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve" role="img" aria-label="Мишка">
               <g class="logo__svg">
                 <path d="M19.135,21.495c-0.083-2.683-0.51-5.347-0.475-8.035c0.028-2.174,0.389-4.41-0.36-6.495 c0.047-0.237,0.096-0.473,0.14-0.711c0.193-1.045-3.271-0.492-3.813,0.464c-0.343,0.28-0.519,0.615-0.375,0.957 c0.037,0.086,0.069,0.174,0.102,0.261c-0.656,3.204-1.57,6.306-2.621,9.412c-0.402,1.188-0.888,2.349-1.298,3.533 c-0.582-1.104-1.169-2.194-1.643-3.377C7.418,14.071,6.18,10.602,4.505,7.298C4.695,5.77,1.301,5.93,0.632,7.33 c-0.809,1.694-0.705,3.403-0.438,5.214c0.3,2.042,0.353,4.05,0.377,6.111c0.047,3.976,0.358,7.943,0.417,11.919 c-0.354,0.395-0.461,0.881-0.091,1.375c0.162,0.216,0.361,0.382,0.571,0.549c0.904,0.724,3.5,0.107,3.496-1.271 c-0.014-4.123-0.312-8.238-0.42-12.358c-0.011-0.404-0.018-0.807-0.024-1.21c0.057,0.145,0.114,0.29,0.171,0.434 c0.64,1.604,1.31,3.163,2.185,4.654c0.868,1.478,1.303,3.064,1.803,4.677c-0.189,0.217-0.303,0.462-0.233,0.708 c-0.039,0.18,0.07,0.292,0.251,0.36c0.639,0.548,1.841,0.274,2.509-0.007c0.287-0.121,0.561-0.261,0.826-0.424 c0.345-0.212,0.883-0.679,0.729-1.159c-0.03-0.093-0.058-0.186-0.087-0.279c0.47-1.27,0.709-2.589,0.965-3.93 c0.272-1.428,0.782-2.78,1.295-4.133c0.052,0.619,0.106,1.238,0.156,1.855c0.204,2.554,0.033,5.072,0.007,7.626 c-0.008,0.847,0.054,1.633,0.219,2.461c0.068,0.343,0.367,1.808,0.281,1.887c-0.611,0.564-0.433,1.257,0.385,1.437 c0.915,0.201,2.081-0.105,2.77-0.742c1.198-1.106,0.632-2.845,0.361-4.241C18.661,26.501,19.208,23.879,19.135,21.495z"/>
                 <path d="M27.499,22.17c-0.074-1.988-0.765-3.862-0.774-5.872c-0.011-2.305,0.181-4.593-0.155-6.886 c-0.106-0.725-4.056,0.1-3.917,1.05c0.309,2.11,0.197,4.229,0.159,6.354c-0.037,2.044,0.468,3.898,0.73,5.904 c0.269,2.054-0.084,4.157,0.149,6.213c0.109,0.962,0.75,2.743,0.089,3.58c-0.42,0.532,1.469,0.342,1.553,0.326 c0.769-0.142,1.793-0.392,2.304-1.038c0.653-0.828,0.196-2.426,0.053-3.357C27.374,26.385,27.576,24.249,27.499,22.17z"/>
@@ -194,17 +201,17 @@
             </svg>
           </div>
           <section class="social">
-            <a class="social-btn social-btn--inst" href="#"></a>
-            <a class="social-btn social-btn--fb" href="#"></a>
-            <a class="social-btn social-btn--tw" href="#"></a>
+            <a class="social-btn social-btn--inst link--hidden" href="#">Инстаграм</a>
+            <a class="social-btn social-btn--fb link--hidden" href="#">Фейсбук</a>
+            <a class="social-btn social-btn--tw link--hidden" href="#">Твиттер</a>
           </section>
           <section class="copyright">
-            <a class="link copyright__link" href="https://htmlacademy.ru/">Разработано</a>
+            <a class="link copyright__link" href="https://htmlacademy.ru/">Разработано<span class="link--hidden">HTMLAcademy</span></a>
           </section>
         </div>
       </section>
     </footer>
-    <form class="form form--popup">
+    <form class="form form--popup form--popup-product-of-week">
       <h2 class="form__title">Добавить в корзину</h2>
       <span class="form__sub-title">Выберите размер:</span>
       <fieldset class="form__fieldset form__fieldset--stretched">
@@ -225,5 +232,10 @@
       </fieldset>
       <a class="btn btn--stretched btn--green" href="#">Добавить</a>
     </form>
+    <div class="overlay"></div>
+    <script src="js/menu.js"></script>
+    <script src="js/product-of-week.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>

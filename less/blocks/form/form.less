@@ -1,38 +1,51 @@
 .form {
 
   &--popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
     width: 260px;
+    height: 285px;
     margin: auto;
     padding-right: 30px;
     padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 15px;
     padding-bottom: 35px;
     border: 1px solid #c7c7c7;
+    background-color: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   }
 
+  &--popup-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &--order {
-    margin-top: 30px;
-    margin-bottom: -20px;
+    margin-top: 43px;
+    margin-bottom: 56px;
   }
 }
 
 .form__wrapper {
   .container(260px; 30px);
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__fieldset {
-  margin: 0;
+  margin-bottom: 24px;
   padding: 0;
   border: none;
 
+
   &--medium-margin {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &--email {
@@ -40,7 +53,7 @@
   }
 
   &--textarea {
-    margin-bottom: 21px;
+    margin-bottom: 28px;
   }
 
   &--stretched {
@@ -59,7 +72,7 @@
 
 .form__descr-wrapper {
   .container(260px);
-  margin-bottom: 8px;
+  margin-bottom: -10px;
   font-size: 13px;
   line-height: 1.84;
 }
@@ -75,36 +88,16 @@
 
   &--full-width {
     .container(260px);
+    position: relative;
     flex-direction: column;
   }
 }
 
 .form__fieldset-title {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 32px;
   font-family: @open-sans-bold;
   font-size: 17px;
   text-transform: uppercase;
   color: @accent-color;
-
-  &--small-margin {
-    margin-bottom: 23px;
-  }
-
-  &--tiny-margin {
-    margin-top: 6px;
-    margin-bottom: 2px;
-  }
-
-  &::after {
-    content: '';
-    position: relative;
-    top: -12px;
-    z-index: 1;
-    display: block;
-    border-bottom: 1px solid @accent-color;
-  }
 }
 
 .form__list {
@@ -210,8 +203,8 @@
 .form__icon-mail {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 10px;
+  right: -5px;
+  bottom: 12px;
   fill: rgba(0, 0, 0, 0.2);
 }
 
@@ -298,6 +291,51 @@
   font-size: 14px;
 }
 
+@media @mobile-width-only {
+  .form__fieldset-title {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    padding-right: 27px;
+    text-align: center;
+    background-color: white;
+  }
+
+  .form__fieldset-title-wrapper {
+    margin-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: relative;
+      top: -27px;
+      z-index: 1;
+      display: block;
+      border-bottom: 1px solid @accent-color;
+    }
+
+    &--small-margin {
+      margin-bottom: 8px;
+    }
+
+    &--tiny-margin {
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    &--tiny-margin::after {
+      top: -10px;
+    }
+
+    &--textarea-margin {
+      margin-bottom: 37px;
+    }
+
+    &--textarea-margin::after {
+      top: -10px;
+    }
+  }
+}
+
 @media @tablet-width {
   .form {
 
@@ -308,8 +346,8 @@
     }
 
     &--order {
-      margin-top: 95px;
-      margin-bottom: -24px;
+      margin-top: 88px;
+      margin-bottom: -18px;
     }
   }
 
@@ -324,7 +362,7 @@
   }
 
   .form__title {
-    width: 360px;
+    width: 365px;
     font-size: 30px;
     line-height: 1.9;
   }
@@ -342,7 +380,7 @@
 
     &--small-margin {
       margin-bottom: 48px;
-            padding-top: 50px;
+      padding-top: 50px;
       padding-bottom: 10px;
     }
 
@@ -380,6 +418,7 @@
   }
 
   .form__fieldset-title {
+    display: block;
     width: 167px;
 
     &::after {
@@ -416,7 +455,7 @@
 
     &--column {
       flex-basis: 240px;
-      margin-right: 23px;
+      margin-right: 21px;
       margin-bottom: 53px;
     }
 
@@ -460,7 +499,6 @@
 
     &--radio,
     &--checkbox {
-
       padding-left: 81px;
 
       &:before {
@@ -474,15 +512,23 @@
   .form__input {
     width: 480px;
     padding-left: 20px;
+    font-size: 19px;
 
     &--full-width {
       background-color: #f1f1f1;
     }
   }
 
+  .form__icon-phone,
+  .form__icon-mail {
+    top: 11px;
+    right: 11px;
+  }
+
   .form__textarea {
     width: 465px;
     padding-left: 15px;
+    font-size: 19px;
   }
 
   .form__actions-wrapper {
@@ -506,7 +552,7 @@
 
 @media @desktop-width {
   .form {
-    margin-top: 150px;
+    margin-top: 140px;
   }
 
   .form__descr-wrapper {
@@ -593,6 +639,11 @@
     &--full-width {
       width: 680px;
     }
+  }
+
+  .form__icon-phone,
+  .form__icon-mail {
+    right: -5px;
   }
 
   .form__textarea {
