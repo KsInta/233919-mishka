@@ -16,12 +16,15 @@
 
 .logo__link {
 
-  &:hover {
-    opacity: 0.6;
-  }
+  &--header {
 
-  &:active {
-    opacity: 0.3;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -43,14 +46,17 @@
     }
   }
 
-  .logo__link--footer {
+  .logo__link {
 
-    &:hover .logo__svg {
-      fill: @accent-color;
-    }
+    &--footer {
 
-    &:active .logo__svg {
-      opacity: 0.3;
+      &:hover .logo__svg {
+        fill: @accent-color;
+      }
+
+      &:active .logo__svg {
+        opacity: 0.3;
+      }
     }
   }
 }
