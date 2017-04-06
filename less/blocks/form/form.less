@@ -201,7 +201,6 @@
 
 .form__icon-phone,
 .form__icon-mail {
-  content: '';
   position: absolute;
   right: -5px;
   bottom: 12px;
@@ -264,6 +263,10 @@
 
     &:hover::before {
       border-color: @accent-color;
+    }
+
+    &:active::before {
+      border-color: #c7c7c7;
     }
   }
 

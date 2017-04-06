@@ -16,12 +16,13 @@
   position: relative;
   z-index: 5;
   display: block;
+  height: 75px;
   padding-top: 28px;
-  padding-bottom: 30px;
   padding-left: 33px;
   font-size: 19px;
   line-height: 1.26;
   color: white;
+  transition: all 0.1s ease-out;
 
   &--green {
     background-color: @accent-color;
@@ -35,6 +36,7 @@
       height: 62px;
       background-image: url('../img/catalog-nav/icon-interior.svg');
       opacity: 0.5;
+      transition: all 0.1s ease-out;
     }
   }
 
@@ -49,6 +51,8 @@
       width: 61px;
       height: 60px;
       background-image: url('../img/catalog-nav/icon-toy.svg');
+      opacity: 0.5;
+      transition: all 0.1s ease-out;
     }
   }
 
@@ -89,9 +93,46 @@
   }
 
   .catalog-nav__link {
+    height: 90px;
     padding-top: 30px;
     font-size: 20px;
     line-height: 1.5;
+
+    &--green {
+
+      &::after {
+        top: 27px;
+      }
+    }
+
+    &--dark-green {
+
+      &::after {
+        top: 30px;
+        right: 32px;
+      }
+    }
+
+    &:hover {
+      height: 97px;
+      padding-top: 23px;
+    }
+
+    &--green:hover {
+      box-shadow: 0 -5px @accent-color;
+    }
+
+    &--dark-green:hover {
+      box-shadow: 0 -5px #56c3b2;
+    }
+
+    &--green:hover::after {
+      top: 22px;
+    }
+
+    &--dark-green:hover::after {
+      top: 25px;
+    }
   }
 }
 
